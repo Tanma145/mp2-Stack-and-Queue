@@ -1,1 +1,1 @@
-# mp2-Stack-and-Queue
+# mp2-queue
