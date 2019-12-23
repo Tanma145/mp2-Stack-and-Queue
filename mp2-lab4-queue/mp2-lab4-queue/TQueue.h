@@ -21,6 +21,15 @@ public:
 	int GetCurSize() {
 		return CurSize;
 	}
+	int GetMaxSize() {
+		return MaxSize;
+	}
+	int GetHead() {
+		return arr[Head];
+	}
+	int GetTail() {
+		return arr[Tail];
+	}
 	TQueue<T>& operator= (const TQueue<T>& q) {
 		if (this != &q) {
 			if (MaxSize != q.MaxSize) {
@@ -52,7 +61,7 @@ public:
 			arr[Tail] = a;
 			CurSize++;
 		}
-		else throw MaxSize - CurSize;
+		else throw (MaxSize - CurSize);
 	}
 	T Pop() {
 		if (!CurSize) throw 0;
@@ -63,6 +72,12 @@ public:
 			Head = 0;
 		CurSize--;
 		return arr[pos];
+	}
+	bool IsFull() {
+		return CurSize == MaxSize;
+	}
+	bool IsEmpty() {
+		return !CurSize;
 	}
 
 	friend std::ostream& operator<<(std::ostream &os, const TQueue &q) {
