@@ -30,6 +30,12 @@ public:
 	int GetTail() {
 		return arr[Tail];
 	}
+	int GetHeadPos() {
+		return Head;
+	}
+	int GetTailPos() {
+		return Tail;
+	}
 	TQueue<T>& operator= (const TQueue<T>& q) {
 		if (this != &q) {
 			if (MaxSize != q.MaxSize) {
@@ -65,13 +71,14 @@ public:
 	}
 	T Pop() {
 		if (!CurSize) throw 0;
-		int pos = Head;
-		if (Head != MaxSize - 1)
-			Head++;
-		else
-			Head = 0;
 		CurSize--;
-		return arr[pos];
+		if (Head != MaxSize - 1)
+			return arr[Head++];
+		else{
+			int pos = Head;
+			Head = 0;
+			return arr[pos];
+		}
 	}
 	bool IsFull() {
 		return CurSize == MaxSize;

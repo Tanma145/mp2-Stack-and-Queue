@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mp2-lab4-queue", "mp2-lab4-queue\mp2-lab4-queue.vcxproj", "{122A593A-EC94-44A4-8FE5-50BCF698F864}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppCLR_WinformsProjekt1", "..\CppCLR_WinformsProjekt1\CppCLR_WinformsProjekt1\CppCLR_WinformsProjekt1.vcxproj", "{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "graphics", "..\Graphics-EmptyProject\CppWinForm1.vcxproj", "{9696B190-8A31-45BA-A43E-0287102EF438}"
 EndProject
 Global
@@ -25,14 +23,6 @@ Global
 		{122A593A-EC94-44A4-8FE5-50BCF698F864}.Release|x64.Build.0 = Release|x64
 		{122A593A-EC94-44A4-8FE5-50BCF698F864}.Release|x86.ActiveCfg = Release|Win32
 		{122A593A-EC94-44A4-8FE5-50BCF698F864}.Release|x86.Build.0 = Release|Win32
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Debug|x64.ActiveCfg = Debug|x64
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Debug|x64.Build.0 = Debug|x64
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Debug|x86.ActiveCfg = Debug|Win32
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Debug|x86.Build.0 = Debug|Win32
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Release|x64.ActiveCfg = Release|x64
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Release|x64.Build.0 = Release|x64
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Release|x86.ActiveCfg = Release|Win32
-		{3DCB4411-4028-4F69-9E80-1180F5CC9E3D}.Release|x86.Build.0 = Release|Win32
 		{9696B190-8A31-45BA-A43E-0287102EF438}.Debug|x64.ActiveCfg = Debug|x64
 		{9696B190-8A31-45BA-A43E-0287102EF438}.Debug|x64.Build.0 = Debug|x64
 		{9696B190-8A31-45BA-A43E-0287102EF438}.Debug|x86.ActiveCfg = Debug|Win32

@@ -25,6 +25,10 @@ namespace CppWinForm1 {
 		Random^ rnd1;
 		Pen^ BlackPen;
 		Pen^ WhitePen;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Label^ label15;
 		   Pen^ ALLCLPen;
 
 	public:
@@ -117,6 +121,10 @@ namespace CppWinForm1 {
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -273,12 +281,52 @@ namespace CppWinForm1 {
 			this->label11->Size = System::Drawing::Size(0, 13);
 			this->label11->TabIndex = 17;
 			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(530, 248);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(43, 13);
+			this->label12->TabIndex = 18;
+			this->label12->Text = L"Голова";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(589, 248);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(37, 13);
+			this->label13->TabIndex = 19;
+			this->label13->Text = L"Хвост";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(530, 272);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(41, 13);
+			this->label14->TabIndex = 20;
+			this->label14->Text = L"label14";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(589, 272);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(41, 13);
+			this->label15->TabIndex = 21;
+			this->label15->Text = L"label15";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(905, 364);
+			this->Controls->Add(this->label15);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->label13);
+			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
@@ -305,15 +353,14 @@ namespace CppWinForm1 {
 		}
 #pragma endregion
 		void DrawQueue() {
-			int start = 360 * pQueue->GetHead() / pQueue->GetMaxSize();
+			int start = 360 * pQueue->GetHeadPos() / pQueue->GetMaxSize();
 			int finish = 360 * (pQueue->GetCurSize()) / pQueue->GetMaxSize();
 			gr->DrawArc(BlackPen, CenterX, CenterY, Width, Height, start, finish);
 		}
 		void Clean()
 		{
-			int start = 360 * pQueue->GetHead() / pQueue->GetMaxSize();
+			int start = 360 * pQueue->GetHeadPos() / pQueue->GetMaxSize();
 			int finish = 360 * (pQueue->GetCurSize()) / pQueue->GetMaxSize();
-
 			gr->DrawArc(WhitePen, CenterX, CenterY, Width, Height, start, finish);
 		}
 		void CleanAll()
@@ -360,6 +407,8 @@ namespace CppWinForm1 {
 			label8->Text = Convert::ToString(PushCount);
 			label9->Text = Convert::ToString(PopCount);
 			label11->Text = Convert::ToString(pQueue->GetCurSize());
+			label14->Text = Convert::ToString(pQueue->GetHeadPos());
+			label15->Text = Convert::ToString(pQueue->GetTailPos());
 		}
 
 };
